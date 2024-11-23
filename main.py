@@ -4,8 +4,10 @@ import torch
 import re
 import json
 from typing import Dict, List, Tuple
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Inicializar el modelo y tokenizador (usando un modelo en español)
 MODEL_NAME = "PlanTL-GOB-ES/roberta-base-bne"
